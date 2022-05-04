@@ -1,0 +1,205 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+body {
+	background: linear-gradient(-45deg, #4cf9ff, #2fb3f0, #257df0, #004db3);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    height: 80vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.wrapper {
+    margin-top: 12vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divTitle {
+    width:50vw;
+    max-width: 1000px;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.divForm {
+    margin-top: 40px;
+    max-width: 900px;
+}
+
+.divForm input {
+    border: 2px solid black;
+    width:600px;
+    height:40px;
+    font-size: 1.2rem;
+    padding-left: 5px;
+}
+
+.divForm input::placeholder {
+    color:gray;
+}
+
+.formInputBtn {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+
+.btnSubmit {
+    width:150px;
+    height:40px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    background-color: white;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: 0.1s linear;
+}
+
+.btnSubmit:hover {
+    cursor:pointer;
+    background-color: black;
+    border: 2px solid white;
+    color:white;
+}
+
+.listWrapper {
+    display:flex;
+    flex-direction:column;
+}
+
+.listWrapper > div {
+    margin-bottom: 5px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+
+.listWrapper > div button {
+    width: 50px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    background-color: white;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: 0.1s linear;
+}
+
+.listWrapper > div button:hover {
+    cursor:pointer;
+    background-color: black;
+    border: 2px solid white;
+    color:white;
+}
+
+.listWrapper > div input {
+    background-color: rgb(13, 10, 194);
+    color:white;
+    border: 2px solid white;
+    padding-left: 5px;
+}
+
+.listWrapper > div input::placeholder {
+    color:white;
+}
+
+
+.listWrapper > div .btnDoneDone {
+    text-decoration: line-through;
+    background-color: rgb(108, 201, 231);
+}
+
+.inputText {
+    background-color: violet;
+}
+::placeholder {
+    color:black;
+}
+
+
+@media (max-width:1200px) {
+    .divTitle {
+        font-size: 40px;
+    }
+    
+    .divForm input {
+        width:450px;
+    }
+
+}
+
+@media (max-width:720px) {
+    .divTitle {
+        font-size: 30px;
+    }
+    .divForm input {
+        width:370px;
+    }
+    .btnSubmit {
+        width:100px;
+    }
+
+    .listWrapper > div {
+        display:block;
+        float:left;
+    }
+    .listWrapper > div input {
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5px;
+    }
+
+    .listWrapper > div button{
+        width:27%;
+        margin-left: 3%;
+        margin-right: 3%;
+        height:32px;
+    }
+}
+
+@media (max-width:640px) {
+    .divTitle {
+        font-size: 25px;
+    }
+    .divForm input {
+        width:280px;
+    }
+}
+
+@media (max-width:440px) {
+    .divTitle {
+        font-size: 20px;
+    }
+    .divForm input {
+        width:220px;
+        margin-left:10px;
+    }
+    .btnSubmit {
+        width: 80px;
+        margin-right:0;
+    }
+}
